@@ -3,5 +3,5 @@
   "cSpell.words": ["bitwallet"],
   "eslint.workingDirectories": ["./src", "./__tests__"],
   "jest.autoRun": "off",
-  "conventionalCommits.scopes": ["skeleton", "test"]
+  "conventionalCommits.scopes": ["skeleton", "test", "debugging"]
 }
