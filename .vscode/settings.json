@@ -1,11 +1,7 @@
 {
   "cSpell.language": "en,es",
-  "cSpell.words": [
-    "bitwallet"
-  ],
-  "eslint.workingDirectories": [
-    "./src",
-    "./__tests__"
-  ],
-  "jest.autoRun": "off"
+  "cSpell.words": ["bitwallet"],
+  "eslint.workingDirectories": ["./src", "./__tests__"],
+  "jest.autoRun": "off",
+  "conventionalCommits.scopes": ["structure"]
 }

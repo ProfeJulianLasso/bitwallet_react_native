@@ -1,5 +1,5 @@
+import {App} from '@infrastructure';
 import {render, screen} from '@testing-library/react-native';
-import App from '../src/app';
 
 describe('App', () => {
   it('renders correctly', () => {

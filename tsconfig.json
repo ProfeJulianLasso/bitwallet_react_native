@@ -1,3 +1,26 @@
 {
-  "extends": "@tsconfig/react-native/tsconfig.json"
+  "extends": "@tsconfig/react-native/tsconfig.json",
+  "compilerOptions": {
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "strictBindCallApply": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "paths": {
+      "@assets": ["./src/infrastructure/assets"],
+      "@assets/*": ["./src/infrastructure/assets/*"],
+      "@component": ["./src/infrastructure/components/"],
+      "@configs": ["./src/infrastructure/configs/"],
+      "@routes": ["./src/infrastructure/routes/"],
+      "@store": ["./src/infrastructure/store/"],
+      "@utils": ["./src/infrastructure/utils/"],
+      "@module/notifications": ["./src/infrastructure/modules/notifications/"],
+      "@module/reports": ["./src/infrastructure/modules/reports/"],
+      "@module/security": ["./src/infrastructure/modules/security/"],
+      "@module/transactions": ["./src/infrastructure/modules/transactions/"],
+      "@application": ["./src/application/"],
+      "@domain": ["./src/domain/"],
+      "@infrastructure": ["./src/infrastructure/"]
+    }
+  }
 }
