@@ -30,6 +30,6 @@ module.exports = {
     '/__tests__/',
     '/__mocks__/',
     'index.ts',
-    '(.*).props.ts',
+    '(.*).style.(ts|tsx)',
   ],
 };
