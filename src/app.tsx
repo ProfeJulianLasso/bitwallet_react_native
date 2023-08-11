@@ -1,20 +1,12 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
-import React from 'react';
-import type {PropsWithChildren} from 'react';
+import type {PropsWithChildren, ReactElement} from 'react';
 import {
   SafeAreaView,
   ScrollView,
   StatusBar,
   StyleSheet,
   Text,
-  useColorScheme,
   View,
+  useColorScheme,
 } from 'react-native';
 
 import {
@@ -29,16 +21,14 @@ type SectionProps = PropsWithChildren<{
   title: string;
 }>;
 
-function Section({children, title}: SectionProps): JSX.Element {
+function Section({children, title}: SectionProps): ReactElement {
   const isDarkMode = useColorScheme() === 'dark';
   return (
     <View style={styles.sectionContainer}>
       <Text
         style={[
           styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
+          {color: isDarkMode ? Colors.white : Colors.black},
         ]}>
         {title}
       </Text>
@@ -55,7 +45,7 @@ function Section({children, title}: SectionProps): JSX.Element {
   );
 }
 
-function App(): JSX.Element {
+function App(): ReactElement {
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
