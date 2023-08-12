@@ -7,11 +7,11 @@
 #define TIMEOUT_SECONDS 600
 #define TEXT_TO_LOOK_FOR @"Welcome to React"
 
-@interface bitwallet_react_nativeTests : XCTestCase
+@interface bitwalletTests : XCTestCase
 
 @end
 
-@implementation bitwallet_react_nativeTests
+@implementation bitwalletTests
 
 - (BOOL)findSubviewInView:(UIView *)view matching:(BOOL (^)(UIView *view))test
 {

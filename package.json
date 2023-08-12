@@ -1,5 +1,5 @@
 {
-  "name": "bitwallet_react_native",
+  "name": "bitwallet",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -26,7 +26,7 @@
     "@commitlint/cli": "^17.7.1",
     "@commitlint/config-conventional": "^17.7.0",
     "@react-native/eslint-config": "^0.73.0",
-    "@react-native/metro-config": "^0.72.9",
+    "@react-native/metro-config": "^0.73.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/jest-native": "^5.4.2",
     "@testing-library/react-native": "^12.2.0",
@@ -38,7 +38,7 @@
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
     "babel-jest": "^29.6.2",
-    "eslint": "^8.46.0",
+    "eslint": "^8.47.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-jest": "^27.2.3",
     "eslint-plugin-prettier": "^5.0.0",

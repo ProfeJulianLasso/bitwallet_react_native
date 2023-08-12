@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "bitwallet_react_native.app"
-               BlueprintName = "bitwallet_react_native"
-               ReferencedContainer = "container:bitwallet_react_native.xcodeproj">
+               BuildableName = "bitwallet.app"
+               BlueprintName = "bitwallet"
+               ReferencedContainer = "container:bitwallet.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "bitwallet_react_nativeTests.xctest"
-               BlueprintName = "bitwallet_react_nativeTests"
-               ReferencedContainer = "container:bitwallet_react_native.xcodeproj">
+               BuildableName = "bitwalletTests.xctest"
+               BlueprintName = "bitwalletTests"
+               ReferencedContainer = "container:bitwallet.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "bitwallet_react_native.app"
-            BlueprintName = "bitwallet_react_native"
-            ReferencedContainer = "container:bitwallet_react_native.xcodeproj">
+            BuildableName = "bitwallet.app"
+            BlueprintName = "bitwallet"
+            ReferencedContainer = "container:bitwallet.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "bitwallet_react_native.app"
-            BlueprintName = "bitwallet_react_native"
-            ReferencedContainer = "container:bitwallet_react_native.xcodeproj">
+            BuildableName = "bitwallet.app"
+            BlueprintName = "bitwallet"
+            ReferencedContainer = "container:bitwallet.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -1,4 +1,4 @@
-package com.bitwallet_react_native;
+package com.bitwallet;
 
 import android.app.Application;
 import com.facebook.react.PackageList;

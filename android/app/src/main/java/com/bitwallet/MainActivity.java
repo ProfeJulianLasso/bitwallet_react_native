@@ -1,4 +1,4 @@
-package com.bitwallet_react_native;
+package com.bitwallet;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
@@ -13,7 +13,7 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "bitwallet_react_native";
+    return "bitwallet";
   }
 
   /**
