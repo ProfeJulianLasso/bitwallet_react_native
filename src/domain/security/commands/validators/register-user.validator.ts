@@ -12,12 +12,14 @@ export class RegisterUserValidator extends ValidatorBase<RegisterUserCommand> {
       .isUUIDv4();
   }
 
-  validate(): void {
+  validate(): this {
     if (!this.isValid()) {
       throw new DomainException(
         'User registration validation failed',
         this.getErrors(),
       );
     }
+
+    return this;
   }
 }

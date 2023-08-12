@@ -4,7 +4,7 @@ export class UserEntity {
   private _id: string;
   private _externalId: string;
 
-  constructor({id, externalId}: Partial<UserEntity>) {
+  constructor(id?: string, externalId?: string) {
     this._id = id ?? '0';
     this._externalId = externalId ?? '0';
   }
