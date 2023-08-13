@@ -9,7 +9,7 @@
     "paths": {
       "@assets": ["./src/infrastructure/assets"],
       "@assets/*": ["./src/infrastructure/assets/*"],
-      "@component": ["./src/infrastructure/components/"],
+      "@components": ["./src/infrastructure/components/"],
       "@configs": ["./src/infrastructure/configs/"],
       "@routes": ["./src/infrastructure/routes/"],
       "@store": ["./src/infrastructure/store/"],
