@@ -3,10 +3,10 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
+    "android": "ENVFILE=.env.development react-native run-android",
+    "ios": "ENVFILE=.env.development react-native run-ios",
     "lint": "eslint \"{src,__tests__}/**/*.{js,jsx,ts,tsx}\" --fix",
-    "start": "react-native start",
+    "start": "ENVFILE=.env.development react-native start",
     "test": "jest",
     "test:cov": "jest --coverage",
     "test:watch": "jest --watch",
@@ -17,6 +17,7 @@
     "react": "18.2.0",
     "react-native": "0.72.3",
     "react-native-auth0": "^3.0.0",
+    "react-native-config": "^1.5.1",
     "uuid": "^9.0.0"
   },
   "devDependencies": {
