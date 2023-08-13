@@ -8,6 +8,8 @@
     "test",
     "debugging",
     "domain",
-    "application"
+    "application",
+    "component",
+    "infrastructure"
   ]
 }
