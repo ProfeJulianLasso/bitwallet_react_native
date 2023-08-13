@@ -1,6 +1,6 @@
 {
   "cSpell.language": "en,es",
-  "cSpell.words": ["bitwallet", "ENVFILE"],
+  "cSpell.words": ["bitwallet", "ENVFILE", "Pressable"],
   "eslint.workingDirectories": ["./src", "./__tests__"],
   "jest.autoRun": "off",
   "conventionalCommits.scopes": [
