@@ -1,11 +1,20 @@
+import {NavigationContainer} from '@react-navigation/native';
 import type {ReactElement} from 'react';
-import {SafeAreaView, Text} from 'react-native';
+import {Auth0Provider} from 'react-native-auth0';
+import Config from 'react-native-config';
+import 'react-native-gesture-handler';
+import {MainRoute} from './routes';
 
 function App(): ReactElement {
+  console.log('Config.SCOPE', Config.SCOPE);
   return (
-    <SafeAreaView>
-      <Text>Welcome to React Native</Text>
-    </SafeAreaView>
+    <Auth0Provider
+      domain={Config.AUTH0_DOMAIN ?? ''}
+      clientId={Config.AUTH0_CLIENT_ID ?? ''}>
+      <NavigationContainer>
+        <MainRoute />
+      </NavigationContainer>
+    </Auth0Provider>
   );
 }
 
