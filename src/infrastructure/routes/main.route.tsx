@@ -1,9 +1,10 @@
+import {LoginPage} from '@module/security';
 import {createStackNavigator} from '@react-navigation/stack';
-import {LoginPage} from '../modules';
+import type {ReactElement} from 'react';
 
 const Stack = createStackNavigator();
 
-const MainRoute = () => (
+const MainRoute = (): ReactElement => (
   <Stack.Navigator>
     <Stack.Screen
       name="LoginPage"

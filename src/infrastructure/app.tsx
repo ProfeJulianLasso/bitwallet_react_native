@@ -1,12 +1,11 @@
 import {NavigationContainer} from '@react-navigation/native';
+import {MainRoute} from '@routes';
 import type {ReactElement} from 'react';
 import {Auth0Provider} from 'react-native-auth0';
 import Config from 'react-native-config';
 import 'react-native-gesture-handler';
-import {MainRoute} from './routes';
 
 function App(): ReactElement {
-  console.log('Config.SCOPE', Config.SCOPE);
   return (
     <Auth0Provider
       domain={Config.AUTH0_DOMAIN ?? ''}
