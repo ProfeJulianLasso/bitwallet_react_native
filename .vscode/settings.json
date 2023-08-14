@@ -3,6 +3,7 @@
   "cSpell.words": ["bitwallet", "ENVFILE", "Multifactor", "Pressable"],
   "eslint.workingDirectories": ["./src", "./__tests__"],
   "jest.autoRun": "off",
+  "jest.autoRevealOutput": "on-run",
   "conventionalCommits.scopes": [
     "skeleton",
     "test",
@@ -11,5 +12,5 @@
     "application",
     "component",
     "infrastructure"
-  ]
+  ],
 }

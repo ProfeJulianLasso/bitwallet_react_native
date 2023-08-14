@@ -6,21 +6,21 @@
     "strictBindCallApply": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
+    "baseUrl": "./",
     "paths": {
-      "@assets": ["./src/infrastructure/assets"],
       "@assets/*": ["./src/infrastructure/assets/*"],
-      "@components": ["./src/infrastructure/components/"],
-      "@configs": ["./src/infrastructure/configs/"],
-      "@routes": ["./src/infrastructure/routes/"],
-      "@store": ["./src/infrastructure/store/"],
-      "@utils": ["./src/infrastructure/utils/"],
-      "@module/notifications": ["./src/infrastructure/modules/notifications/"],
-      "@module/reports": ["./src/infrastructure/modules/reports/"],
-      "@module/security": ["./src/infrastructure/modules/security/"],
-      "@module/transactions": ["./src/infrastructure/modules/transactions/"],
-      "@application": ["./src/application/"],
-      "@domain": ["./src/domain/"],
-      "@infrastructure": ["./src/infrastructure/"]
+      "@components": ["./src/infrastructure/components"],
+      "@configs": ["./src/infrastructure/configs"],
+      "@routes": ["src/infrastructure/routes"],
+      "@store": ["./src/infrastructure/store"],
+      "@utils": ["./src/infrastructure/utils"],
+      "@module/notifications": ["./src/infrastructure/modules/notifications"],
+      "@module/reports": ["./src/infrastructure/modules/reports"],
+      "@module/security": ["./src/infrastructure/modules/security"],
+      "@module/transactions": ["./src/infrastructure/modules/transactions"],
+      "@application": ["./src/application"],
+      "@domain": ["./src/domain"],
+      "@infrastructure": ["./src/infrastructure"]
     }
   }
 }
