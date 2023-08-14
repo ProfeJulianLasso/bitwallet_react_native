@@ -1,10 +1,11 @@
+import {ButtonAtom, LoginTemplate} from '@components';
+import type {ReactElement} from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
-import {ButtonAtom} from '../../../../components';
 import {useButtonLogin, useButtonLogout} from './hooks';
 import {StylesLoginPage} from './login.style';
 
-const LoginPage = () => {
-  const {onPressButtonLogin, error, isLoading, user} = useButtonLogin();
+const LoginPage = (): ReactElement => {
+  const {loginTemplateProps, error, isLoading, user} = useButtonLogin();
   const {onPressButtonLogout} = useButtonLogout();
 
   return (
@@ -13,7 +14,7 @@ const LoginPage = () => {
 
       {!user && !isLoading && (
         <View style={StylesLoginPage.containerButtonLogin}>
-          <ButtonAtom title="SIGN IN / SIGN UP" onPress={onPressButtonLogin} />
+          <LoginTemplate loginTemplate={loginTemplateProps.loginTemplate} />
         </View>
       )}
 
