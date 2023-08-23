@@ -1,4 +1,3 @@
-export * from './aggregates';
 export * from './commands';
-export * from './entities';
+export * from './models';
 export * from './services';

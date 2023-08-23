@@ -1,4 +1,4 @@
-import {IUserService, UserEntity} from '@domain';
+import {IUserService, User} from '@domain';
 import {HttpClient} from '../../../adapters';
 import {NewUserDto} from '../../../dto';
 
@@ -11,13 +11,13 @@ export class UserService implements IUserService {
   }: {
     id: string;
     externalId: string;
-  }): Promise<UserEntity> {
+  }): Promise<User> {
     try {
       const response = await this.httpClient.post<NewUserDto>({
         url: 'http://localhost:3000/api/v1/users',
         data: {id, externalId},
       });
-      return new UserEntity({
+      return new User({
         id: response.data.id,
         externalId: response.data.externalId,
       });

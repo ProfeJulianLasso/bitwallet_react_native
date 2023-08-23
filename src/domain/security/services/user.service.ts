@@ -1,4 +1,4 @@
-import {UserEntity} from '../entities';
+import {User} from '../models';
 
 export interface IUserService {
   registerUser({
@@ -7,5 +7,5 @@ export interface IUserService {
   }: {
     id: string;
     externalId: string;
-  }): Promise<UserEntity>;
+  }): Promise<User>;
 }

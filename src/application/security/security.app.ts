@@ -1,4 +1,4 @@
-import {IUserService, RegisterUserCommand, UserEntity} from '@domain';
+import {IUserService, RegisterUserCommand, User} from '@domain';
 import {GenerateUuidValidUseCase, RegisterUserUseCase} from './use-cases';
 
 export class SecurityApp {
@@ -10,7 +10,7 @@ export class SecurityApp {
   registerUser(
     registerUserCommand: RegisterUserCommand,
     userService: IUserService,
-  ): Promise<UserEntity> {
+  ): Promise<User> {
     const useCase = new RegisterUserUseCase(userService);
     return useCase.execute(registerUserCommand);
   }

@@ -2,22 +2,19 @@ import {
   IUserService,
   RegisterUserCommand,
   RegisterUserValidator,
-  SecurityAggregate,
-  UserEntity,
+  User,
 } from '@domain';
 
 export class RegisterUserUseCase {
   constructor(private readonly userService: IUserService) {}
 
-  execute(registerUserCommand: RegisterUserCommand): Promise<UserEntity> {
+  execute(registerUserCommand: RegisterUserCommand): Promise<User> {
     const validator = new RegisterUserValidator(registerUserCommand);
     validator.validate();
 
-    const user = new UserEntity();
+    const user = new User();
     user.externalId = registerUserCommand.externalId;
-
-    const securityAggregate = new SecurityAggregate();
-    const newUser = securityAggregate.createUser(user);
+    const newUser = user.create();
 
     return this.userService.registerUser({
       id: newUser.id,

@@ -1,6 +1,6 @@
 import {v4 as uuid} from 'uuid';
 
-export class UserEntity {
+export class User {
   private _id: string;
   private _externalId: string;
 
@@ -11,10 +11,6 @@ export class UserEntity {
 
   get id(): string {
     return this._id;
-  }
-
-  set id(value: string) {
-    this._id = value;
   }
 
   get externalId(): string {
