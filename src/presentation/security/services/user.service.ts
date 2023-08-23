@@ -1,6 +1,5 @@
 import {IUserService, User} from '@domain';
-import {HttpClient} from '../../../adapters';
-import {NewUserDto} from '../../../dto';
+import {HttpClient, NewUserDto} from '@infrastructure';
 
 export class UserService implements IUserService {
   constructor(private readonly httpClient: HttpClient) {}

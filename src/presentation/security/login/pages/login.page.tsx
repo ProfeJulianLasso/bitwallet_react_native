@@ -3,8 +3,9 @@ import {type ReactElement} from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
 import {useButtonLogin, useButtonLogout, useRegisterNewUser} from './hooks';
 import {StylesLoginPage} from './login.style';
+import {LoginProps} from './login.type';
 
-const LoginPage = (): ReactElement => {
+const LoginPage = ({navigation}: LoginProps): ReactElement => {
   const {loginTemplateProps, error, isLoading, user} = useButtonLogin();
   const {onPressButtonLogout} = useButtonLogout();
   useRegisterNewUser();

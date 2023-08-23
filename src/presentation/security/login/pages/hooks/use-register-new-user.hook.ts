@@ -4,8 +4,7 @@ import {useAuth0} from 'react-native-auth0';
 import Config from 'react-native-config';
 import 'react-native-get-random-values';
 import {v5 as uuidv5} from 'uuid';
-import {HttpClient} from '../../../../../adapters';
-import {NetworkException} from '../../../../../exceptions';
+import {HttpClient, NetworkException} from '@infrastructure';
 import {UserService} from '../../../services';
 
 export const useRegisterNewUser = () => {
