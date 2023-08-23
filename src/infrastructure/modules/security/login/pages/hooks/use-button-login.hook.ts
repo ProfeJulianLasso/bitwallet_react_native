@@ -2,7 +2,7 @@ import {LoginTemplateType} from '@components';
 import {useAuth0} from 'react-native-auth0';
 
 export const useButtonLogin = () => {
-  const {authorize, error, isLoading, user} = useAuth0();
+  const {authorize, error, isLoading, user, getCredentials} = useAuth0();
 
   const onPressButtonLogin = () => {
     const login = async () => {
@@ -26,5 +26,5 @@ export const useButtonLogin = () => {
     },
   };
 
-  return {loginTemplateProps, error, isLoading, user};
+  return {loginTemplateProps, error, isLoading, user, getCredentials};
 };
