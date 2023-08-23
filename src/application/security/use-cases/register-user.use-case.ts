@@ -19,6 +19,9 @@ export class RegisterUserUseCase {
     const securityAggregate = new SecurityAggregate();
     const newUser = securityAggregate.createUser(user);
 
-    return this.userService.registerUser(newUser.id, newUser.externalId);
+    return this.userService.registerUser({
+      id: newUser.id,
+      externalId: newUser.externalId,
+    });
   }
 }
