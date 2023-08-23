@@ -1,14 +1,15 @@
-import {ButtonAtom, LoginTemplate} from '@components';
+import {LoginTemplate} from '@components';
 import {type ReactElement} from 'react';
-import {Image, StyleSheet, Text, View} from 'react-native';
-import {useButtonLogin, useButtonLogout, useRegisterNewUser} from './hooks';
+import {Text, View} from 'react-native';
+import {useButtonLogin, useRegisterNewUser} from './hooks';
 import {StylesLoginPage} from './login.style';
-import {LoginProps} from './login.type';
+import {LoginPageProps} from './login.type';
 
-const LoginPage = ({navigation}: LoginProps): ReactElement => {
+const LoginPage = ({navigation}: LoginPageProps): ReactElement => {
   const {loginTemplateProps, error, isLoading, user} = useButtonLogin();
-  const {onPressButtonLogout} = useButtonLogout();
   useRegisterNewUser();
+
+  if (user && !isLoading) navigation.navigate('HomeRoute');
 
   return (
     <View style={StylesLoginPage.container}>
@@ -20,31 +21,10 @@ const LoginPage = ({navigation}: LoginProps): ReactElement => {
         </View>
       )}
 
-      {user && !isLoading && (
-        <>
-          <Image source={{uri: user.picture}} style={stylesTmp.avatar} />
-          <Text>Logged in as {user.nickname}</Text>
-          <View style={stylesTmp.spaceTop}>
-            <ButtonAtom title="LOGOUT" onPress={onPressButtonLogout} />
-          </View>
-        </>
-      )}
-
       {error && <Text>{error.message}</Text>}
+      {user && !isLoading && <Text>{user.email}</Text>}
     </View>
   );
 };
-
-const stylesTmp = StyleSheet.create({
-  avatar: {
-    width: 100,
-    height: 100,
-    borderRadius: 50,
-  },
-  spaceTop: {
-    ...StylesLoginPage.containerButtonLogin,
-    marginTop: 16,
-  },
-});
 
 export default LoginPage;
