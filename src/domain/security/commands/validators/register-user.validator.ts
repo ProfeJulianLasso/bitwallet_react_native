@@ -9,7 +9,7 @@ export class RegisterUserValidator extends ValidatorBase<RegisterUserCommand> {
       .notUndefined()
       .notEmpty()
       .withMessage('External id is required')
-      .isUUIDv4();
+      .isUUIDv5();
   }
 
   validate(): this {
@@ -19,7 +19,6 @@ export class RegisterUserValidator extends ValidatorBase<RegisterUserCommand> {
         this.getErrors(),
       );
     }
-
     return this;
   }
 }

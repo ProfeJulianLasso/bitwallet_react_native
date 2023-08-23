@@ -57,13 +57,29 @@ export class RuleBuilder<
     return this;
   }
 
+  isUUIDv5(message?: string): this {
+    return this.isUUID(5, message);
+  }
+
   isUUIDv4(message?: string): this {
+    return this.isUUID(4, message);
+  }
+
+  private isUUID(version: 4 | 5, message?: string): this {
     const value = this._value as string;
-    if (!uuidValidate(value) && uuidVersion(value) !== 4) {
-      this._validator.error = {
-        property: this._property as string,
-        message: message ?? 'Property must be a valid UUID v4',
-      };
+    const objectError = {
+      property: this._property as string,
+      message: message ?? `Property must be a valid UUID v${version}`,
+    };
+    try {
+      if (!uuidValidate(value) && uuidVersion(value) !== version) {
+        this._validator.error = objectError;
+      }
+    } catch (error) {
+      console.log('error', error);
+      if (error instanceof TypeError) {
+        this._validator.error = objectError;
+      }
     }
 
     return this;
@@ -90,10 +106,12 @@ export class RuleBuilder<
   }
 
   withMessage(message: string): this {
-    this._validator.error = {
-      property: this._property as string,
-      message,
-    };
+    if (!this._validator.isValid()) {
+      this._validator.error = {
+        property: this._property as string,
+        message: message,
+      };
+    }
 
     return this;
   }
