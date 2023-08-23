@@ -4,9 +4,9 @@ export class UserEntity {
   private _id: string;
   private _externalId: string;
 
-  constructor(id?: string, externalId?: string) {
-    this._id = id ?? '0';
-    this._externalId = externalId ?? '0';
+  constructor(data?: {id?: string; externalId?: string}) {
+    this._id = data?.id ?? '0';
+    this._externalId = data?.externalId ?? '0';
   }
 
   get id(): string {
