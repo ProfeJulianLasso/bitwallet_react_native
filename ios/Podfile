@@ -25,7 +25,7 @@ if linkage != nil
   use_frameworks! :linkage => linkage.to_sym
 end
 
-target 'bitwallet_react_native' do
+target 'bitwallet' do
   config = use_native_modules!
 
   # Flags change depending on the env values.
@@ -45,7 +45,7 @@ target 'bitwallet_react_native' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
-  target 'bitwallet_react_nativeTests' do
+  target 'bitwalletTests' do
     inherit! :complete
     # Pods for testing
   end

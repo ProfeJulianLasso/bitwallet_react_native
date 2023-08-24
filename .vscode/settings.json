@@ -1,7 +1,17 @@
 {
   "cSpell.language": "en,es",
-  "cSpell.words": ["bitwallet"],
+  "cSpell.words": ["bitwallet", "ENVFILE", "Multifactor", "Pressable"],
   "eslint.workingDirectories": ["./src", "./__tests__"],
   "jest.autoRun": "off",
-  "conventionalCommits.scopes": ["skeleton", "test", "debugging"]
+  "jest.autoRevealOutput": "on-run",
+  "conventionalCommits.scopes": [
+    "application",
+    "component",
+    "debugging",
+    "domain",
+    "infrastructure",
+    "presentation",
+    "skeleton",
+    "test"
+  ]
 }
