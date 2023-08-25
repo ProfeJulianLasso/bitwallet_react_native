@@ -1,4 +1,4 @@
-import {LoginOrganismType} from '@components';
+import {LoginOrganismType} from '../../organisms';
 
 export type LoginTemplateType = {
   loginTemplate: LoginOrganismType;
