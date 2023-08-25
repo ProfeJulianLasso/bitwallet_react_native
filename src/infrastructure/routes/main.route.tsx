@@ -6,6 +6,8 @@ import HomeRoute from './home.route';
 import {MainRouteParams} from './types';
 
 const Stack = createStackNavigator<MainRouteParams>();
+const Navigator = Stack.Navigator;
+const Screen = Stack.Screen;
 
 const MainRoute = (): ReactElement => {
   const {onPressButtonLogout} = useButtonLogout();
@@ -15,13 +17,13 @@ const MainRoute = (): ReactElement => {
   const nullFunction = (): null => null;
 
   return (
-    <Stack.Navigator>
-      <Stack.Screen
+    <Navigator>
+      <Screen
         name="LoginPage"
         component={LoginPage}
         options={{headerShown: false}}
       />
-      <Stack.Screen
+      <Screen
         name="HomeRoute"
         component={HomeRoute}
         options={{
@@ -31,7 +33,7 @@ const MainRoute = (): ReactElement => {
           headerRight,
         }}
       />
-    </Stack.Navigator>
+    </Navigator>
   );
 };
 
