@@ -1,23 +1,41 @@
-import {HomePage} from '@presentation';
+import {TransferPage} from '@module/transactions';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {StackScreenProps} from '@react-navigation/stack';
-import {ReactElement} from 'react';
-import {HomeRouteParams, MainRouteParams} from './types';
-
-type HomeRouteProps = StackScreenProps<MainRouteParams, 'HomeRoute'>;
+import type {ReactElement} from 'react';
+import PaymentsRoute from './payments.route';
+import TransactionsRoute from './transactions.route';
+import {HomeRouteParams} from './types';
 
 const Tab = createBottomTabNavigator<HomeRouteParams>();
+const Navigator = Tab.Navigator;
+const Screen = Tab.Screen;
 
-const HomeRoute = ({navigation}: HomeRouteProps): ReactElement => (
-  <Tab.Navigator>
-    <Tab.Screen
+const HomeRoute = (): ReactElement => (
+  <Navigator>
+    <Screen
       name="HomePage"
-      component={HomePage}
+      component={TransactionsRoute}
       options={{
+        title: 'Accounts',
         headerShown: false,
       }}
     />
-  </Tab.Navigator>
+    <Screen
+      name="TransfersPage"
+      component={TransferPage}
+      options={{
+        title: 'Transfers',
+        headerShown: false,
+      }}
+    />
+    <Screen
+      name="PaymentsPage"
+      component={PaymentsRoute}
+      options={{
+        title: 'Payments',
+        headerShown: false,
+      }}
+    />
+  </Navigator>
 );
 
 export default HomeRoute;
